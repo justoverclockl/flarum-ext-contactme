@@ -1,12 +1,14 @@
 flarum-ext-contactme:
 
   admin:
+    permissionContact: boh non saprei
 
   forum:
     title: Contact Us
     placeholderName: Scrivi il tuo Nome qui
     emailfield: Scrivi il tuo indirizzo email
     pageTitle: Contattaci
+    subject: Messaggio dal modulo di contatto
     sendForm: Invia Messaggio
     textAreaField: Scrivi qui il tuo messaggio
     pText: |

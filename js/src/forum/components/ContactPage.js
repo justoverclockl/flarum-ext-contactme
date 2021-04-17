@@ -17,7 +17,7 @@ export default class ContactPage extends Page {
           m("h1", {
             class: "Hero-title"},  app.translator.trans("flarum-ext-contactme.forum.pageTitle")),
           m("p", {
-            class: "p"}, app.translator.trans("flarum-ext-contactme.forum.pText")),
+            class: "astroboy"}, app.translator.trans("flarum-ext-contactme.forum.pText")),
           m('.Form-group', [
             m('input.FormControl', {
               name: 'username',

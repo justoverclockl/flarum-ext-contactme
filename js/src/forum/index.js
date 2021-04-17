@@ -4,7 +4,7 @@ import LinkButton from 'flarum/components/LinkButton';
 import ContactPage from './components/ContactPage';
 
 app.initializers.add('justoverclock/flarum-ext-contactme', () => {
-  console.log('[justoverclock/flarum-ext-contactme] Hello, forum!');
+
 });
 
 app.routes.contactPage = {
