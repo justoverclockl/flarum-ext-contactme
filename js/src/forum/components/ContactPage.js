@@ -13,10 +13,18 @@ export default class ContactPage extends Page {
   }
   form() {
     if (!app.session.user) {
-      return m("p", "Not logged in!");
+      return m(
+        "h1",
+        {
+          class: "notloggedin",
+        },
+        app.translator.trans("flarum-ext-contactme.forum.notloggedin")
+      )
     }
     if (this.sent) {
-      return m("p", "Sent successful");
+      return m("div", {"class":"img-container"},
+        m("img", {"src":"https://i.ibb.co/G3w1J0x/sent-successfully-ok.png"})
+      );
     }
     return m("form.Form-group", { onsubmit: this.submit.bind(this) }, [
       m("textarea.message1", {
@@ -26,11 +34,12 @@ export default class ContactPage extends Page {
           "flarum-ext-contactme.forum.textAreaField"
         ),
       }),
-      m(
-        Button,
-        { type: "submit", loading: this.loading, className: "Button" },
-        app.translator.trans("flarum-ext-contactme.forum.sendForm")
-      ),
+      m("div", {"class":"buttonHolder"},
+        m(
+          Button,
+          { type: "submit", loading: this.loading, className: "Button" },
+          app.translator.trans("flarum-ext-contactme.forum.sendForm")
+        )),
     ]);
   }
   view() {

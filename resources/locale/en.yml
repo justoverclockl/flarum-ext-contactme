@@ -1,20 +1,12 @@
 flarum-ext-contactme:
   settings:
     emaillabel: Email su cui ricevere il form di contatto
-
   admin:
-    permissions:
-      flag_posts_label: Flag posts
-      view_flags_label: View flagged posts
-
-
     settings:
       emaillabel: Email alla quale inviare il form di contatto
-
-
-
   forum:
     title: Contattaci
+    notloggedin: Per favore effettua il login per utilizzare il form di contatto
     placeholderName: Scrivi il tuo Nome qui
     emailfield: Scrivi il tuo indirizzo email
     pageTitle: .Contattaci
@@ -32,7 +24,6 @@ flarum-ext-contactme:
       <li>Indicare un indirizzo email corretto</li>
       <li>Non abusare del modulo contatti per richieste che possono essere fatte nel forum</li>
       <li>Non inviare la stessa mail più volte</li>
-
   email:
     contact:
       subject: Nuovo contatto tramite form
