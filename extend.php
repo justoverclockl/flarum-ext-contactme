@@ -12,6 +12,7 @@
 namespace Justoverclock\Contactme;
 
 use Flarum\Extend;
+use Justoverclock\Contactme\Api\Controller\ContactController;
 
 return [
     (new Extend\Frontend('forum'))
@@ -21,5 +22,8 @@ return [
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/resources/less/admin.less'),
+    (new Extend\Routes('forum'))
+        ->post('/sendmail', 'justoverclock.sendmail', ContactController::class),
     new Extend\Locales(__DIR__.'/resources/locale'),
+
 ];
