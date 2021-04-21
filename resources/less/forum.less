@@ -26,16 +26,33 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-.astroboy {
-font-size: inherit;
-border: 0;
-background: #fff;
-color: #667d99;
-border-radius: 4px;
-padding: 8px 15px;
-border-top: 2px dotted #fff;
-border-bottom: 2px dotted #fff;
-margin: 1em 0;
+.warningbox {
+  font-size: inherit;
+  display: block;
+  text-align: center;
+  width: 450px;
+  border-right-style: initial;
+  border-left-style: initial;
+  border-right-color: initial;
+  border-left-color: initial;
+  color: rgb(102, 124, 153);
+  border-width: 2px 0px;
+  border-image: initial;
+  background: rgb(255, 226, 149);
+  border-radius: 4px;
+  padding: 8px 15px;
+  border-top: 2px dotted rgb(255, 255, 255);
+  border-bottom: 2px dotted rgb(255, 255, 255);
+  margin: auto;
+}
+.warningbox:before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f071";
+    color: #ff2a2a;
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight:900;
 }
 
 .titolo1
@@ -159,3 +176,4 @@ textarea.message1 {
   text-align: center;
   margin-top: 40px;
 }
+

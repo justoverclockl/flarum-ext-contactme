@@ -42,7 +42,7 @@ export default class ContactPage extends Page {
       return m(
         "h1",
         {
-          class: "notloggedin",
+          class: "warningbox",
         },
         app.translator.trans("flarum-ext-contactme.forum.notloggedin")
       )
