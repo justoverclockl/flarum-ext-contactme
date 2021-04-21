@@ -34,5 +34,5 @@ php flarum cache:clear
 ### Links
 
 - [Packagist](https://packagist.org/packages/justoverclock/flarum-ext-contactme)
-- [GitHub](https://github.com/justoverclock/flarum-ext-contactme)
+- [GitHub](https://github.com/justoverclockl/flarum-ext-contactme)
 - [Discuss](https://flarum.it)
