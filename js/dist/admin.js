@@ -119,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
  *  Author: Marco Colia
  *  Website: https://flarum.it
  *
- *  Special Thanks to Sasha Askvortsov
+ *  Special Thanks to Askvortsov
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
