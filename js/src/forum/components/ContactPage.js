@@ -29,6 +29,7 @@ import IndexPage from "flarum/components/IndexPage";
 import listItems from "flarum/helpers/listItems";
 import Stream from "flarum/common/utils/Stream";
 import Button from "flarum/common/components/Button";
+import icon from "flarum/helpers/icon";
 
 export default class ContactPage extends Page {
   oninit(vnode) {
@@ -39,17 +40,45 @@ export default class ContactPage extends Page {
   }
   form() {
     if (!app.session.user) {
-      return m(
-        "h1",
-        {
-          class: "warningbox",
-        },
-        app.translator.trans("flarum-ext-contactme.forum.notloggedin")
+      return m("div", {"class":"boxalignwarn"},
+        [
+          m("span", {"class":"circlewarn"},
+            m("span",
+              m("i", {"class":"fas fa-exclamation-triangle fa-2x"})
+            )
+          ),
+          m("div", {"class":"chartwarn"},
+            [
+              m("b",
+                app.translator.trans("flarum-ext-contactme.forum.plsregister")
+              ),
+              m("div",
+                app.translator.trans("flarum-ext-contactme.forum.tocontinue")
+              )
+            ]
+          )
+        ]
       )
     }
     if (this.sent) {
-      return m("div", {"class":"img-container"},
-        m("img", {"src":"https://i.ibb.co/G3w1J0x/sent-successfully-ok.png"})
+      return m("div", {"class":"boxalign"},
+          [
+            m("span", {"class":"circle"},
+              m("span",
+                m("i", {"class":"fas fa-paper-plane fa-2x"})
+              )
+            ),
+            m("div", {"class":"chart"},
+              [
+                m("b",
+                  app.translator.trans("flarum-ext-contactme.forum.messagesent")
+                ),
+                m("div",
+                  app.translator.trans("flarum-ext-contactme.forum.backsoon")
+                )
+              ]
+            )
+          ]
       );
     }
     return m("form.Form-group", { onsubmit: this.submit.bind(this) }, [
@@ -80,12 +109,17 @@ export default class ContactPage extends Page {
           ),
           m(
             ".IndexPage-results.sideNavOffset",
-            m(
-              "h1",
-              {
-                class: "titolo1",
-              },
-              app.translator.trans("flarum-ext-contactme.forum.pageTitle")
+            m("div", {"class":"iconcontainer"},
+              [
+                m("div", {"class":"fontico"},
+                  m("i", {"class":"fas fa-pencil-alt"})
+                ),
+                m("div", {"class":"icocont"},
+                  m("div", {"class":"titolo1"},
+                    app.translator.trans("flarum-ext-contactme.forum.pageTitle")
+                  )
+                )
+              ]
             ),
             m(
               "p",
