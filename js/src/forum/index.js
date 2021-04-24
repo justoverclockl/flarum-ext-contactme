@@ -24,7 +24,6 @@
  *  SOFTWARE.
  */
 
-
 import { extend } from "flarum/extend";
 import IndexPage from "flarum/components/IndexPage";
 import LinkButton from "flarum/components/LinkButton";

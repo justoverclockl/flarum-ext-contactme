@@ -40,46 +40,39 @@ export default class ContactPage extends Page {
   }
   form() {
     if (!app.session.user) {
-      return m("div", {"class":"boxalignwarn"},
-        [
-          m("span", {"class":"circlewarn"},
-            m("span",
-              m("i", {"class":"fas fa-exclamation-triangle fa-2x"})
-            )
+      return m("div", { class: "boxalignwarn" }, [
+        m(
+          "span",
+          { class: "circlewarn" },
+          m("span", m("i", { class: "fas fa-exclamation-triangle fa-2x" }))
+        ),
+        m("div", { class: "chartwarn" }, [
+          m(
+            "b",
+            app.translator.trans("flarum-ext-contactme.forum.plsregister")
           ),
-          m("div", {"class":"chartwarn"},
-            [
-              m("b",
-                app.translator.trans("flarum-ext-contactme.forum.plsregister")
-              ),
-              m("div",
-                app.translator.trans("flarum-ext-contactme.forum.tocontinue")
-              )
-            ]
-          )
-        ]
-      )
+          m(
+            "div",
+            app.translator.trans("flarum-ext-contactme.forum.tocontinue")
+          ),
+        ]),
+      ]);
     }
     if (this.sent) {
-      return m("div", {"class":"boxalign"},
-          [
-            m("span", {"class":"circle"},
-              m("span",
-                m("i", {"class":"fas fa-paper-plane fa-2x"})
-              )
-            ),
-            m("div", {"class":"chart"},
-              [
-                m("b",
-                  app.translator.trans("flarum-ext-contactme.forum.messagesent")
-                ),
-                m("div",
-                  app.translator.trans("flarum-ext-contactme.forum.backsoon")
-                )
-              ]
-            )
-          ]
-      );
+      return m("div", { class: "boxalign" }, [
+        m(
+          "span",
+          { class: "circle" },
+          m("span", m("i", { class: "fas fa-paper-plane fa-2x" }))
+        ),
+        m("div", { class: "chart" }, [
+          m(
+            "b",
+            app.translator.trans("flarum-ext-contactme.forum.messagesent")
+          ),
+          m("div", app.translator.trans("flarum-ext-contactme.forum.backsoon")),
+        ]),
+      ]);
     }
     return m("form.Form-group", { onsubmit: this.submit.bind(this) }, [
       m("textarea.message1", {
@@ -89,12 +82,15 @@ export default class ContactPage extends Page {
           "flarum-ext-contactme.forum.textAreaField"
         ),
       }),
-      m("div", {"class":"buttonHolder"},
+      m(
+        "div",
+        { class: "buttonHolder" },
         m(
           Button,
           { type: "submit", loading: this.loading, className: "Button" },
           app.translator.trans("flarum-ext-contactme.forum.sendForm")
-        )),
+        )
+      ),
     ]);
   }
   view() {
@@ -109,18 +105,22 @@ export default class ContactPage extends Page {
           ),
           m(
             ".IndexPage-results.sideNavOffset",
-            m("div", {"class":"iconcontainer"},
-              [
-                m("div", {"class":"fontico"},
-                  m("i", {"class":"fas fa-pencil-alt"})
-                ),
-                m("div", {"class":"icocont"},
-                  m("div", {"class":"titolo1"},
-                    app.translator.trans("flarum-ext-contactme.forum.pageTitle")
-                  )
+            m("div", { class: "iconcontainer" }, [
+              m(
+                "div",
+                { class: "fontico" },
+                m("i", { class: "fas fa-pencil-alt" })
+              ),
+              m(
+                "div",
+                { class: "icocont" },
+                m(
+                  "div",
+                  { class: "titolo1" },
+                  app.translator.trans("flarum-ext-contactme.forum.pageTitle")
                 )
-              ]
-            ),
+              ),
+            ]),
             m(
               "p",
               {
