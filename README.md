@@ -20,14 +20,13 @@ Screenshot:
 Install with composer:
 
 ```sh
-composer require justoverclock/flarum-ext-contactme:"*"
+composer require justoverclock/flarum-ext-contactme
 ```
 
 ### Updating
 
 ```sh
-composer update justoverclock/flarum-ext-contactme:"*"
-php flarum migrate
+composer update justoverclock/flarum-ext-contactme:
 php flarum cache:clear
 ```
 
