@@ -1,6 +1,6 @@
 # Contactme
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-contactme.svg)](https://packagist.org/packages/justoverclock/flarum-ext-contactme) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-contactme.svg)](https://packagist.org/packages/justoverclock/flarum-ext-contactme)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-contactme.svg)](https://packagist.org/packages/justoverclock/flarum-ext-contactme) [![Total Downloads](https://poser.pugx.org/justoverclock/flarum-ext-contactme/downloads)](//packagist.org/packages/justoverclock/flarum-ext-contactme)
 
 A [Flarum](http://flarum.org) extension. Add Contact Us Page in sidenav for registered users only.
 
