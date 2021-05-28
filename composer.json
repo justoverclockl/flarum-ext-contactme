@@ -2,7 +2,9 @@
   "name": "justoverclock/flarum-ext-contactme",
   "description": "Add Contact Us Page in sidenav",
   "keywords": [
-    "flarum"
+    "flarum",
+    "contact form",
+    "contact"
   ],
   "type": "flarum-extension",
   "license": "MIT",
