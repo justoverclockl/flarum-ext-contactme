@@ -30,7 +30,7 @@
   "extra": {
     "flarum-extension": {
       "title": "Contactme",
-      "category": "feauture",
+      "category": "feature",
       "icon": {
         "name": "fas fa-at",
         "backgroundColor": "red",
